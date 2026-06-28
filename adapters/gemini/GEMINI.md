@@ -15,10 +15,10 @@ Use this skill to turn product notes, business context, research, and stakeholde
 
 ## When to Use
 
-- Draft a PRD, BRD, or a related product/business document
-- Revise a document after scope, market, or business changes
+- Draft a PRD, BRD, ADR, architecture blueprint, API docs, runbook, postmortem, README/changelog, or onboarding/SOP document
+- Revise a document after scope, market, technical, or operational changes
 - Review whether a document is complete, consistent, and grounded in source notes
-- Research the market, domain, competitors, or supporting evidence before drafting
+- Research the market, domain, competitors, technical constraints, or supporting evidence before drafting
 - Create a new document family that should follow the same repository style
 
 Do not use this for code, API flow testing, or free-form note taking unless the goal is a structured document artifact.
@@ -38,7 +38,14 @@ Do not use this for code, API flow testing, or free-form note taking unless the 
 
 - PRD: product intent, users, problem, scope, requirements, acceptance criteria, launch success.
 - BRD: business case, market, positioning, monetization, metrics, risks, and constraints.
-- Research pack: evidence gathering, source quality, synthesis, and open questions before drafting PRD/BRD.
+- ADR: one significant technical decision, its context, alternatives, and consequences.
+- Architecture: system blueprint, boundaries, components, data flow, and implementation guidance.
+- API Docs: endpoints, auth, request/response shapes, examples, and error behavior.
+- Runbook: repeatable operational procedure for incidents, maintenance, or support.
+- Postmortem: incident timeline, root cause, contributing factors, and corrective actions.
+- README/Changelog: repo overview, quick start, usage, and release notes.
+- Onboarding/SOP: setup, handoff, standard process, and repeatable operating steps.
+- Research pack: evidence gathering, source quality, synthesis, and open questions before drafting any family.
 
 ## Research Guidance
 
@@ -65,6 +72,49 @@ When research is needed, produce:
 6. Implications for the PRD/BRD
 7. Open questions
 
+## Family Guidance
+
+### PRD and BRD
+
+- Keep PRD/BRD as the default product/business outputs.
+- If a PRD or BRD needs current evidence, research first and then draft from the evidence table.
+- Use the community structure only as a guide; keep the document shape aligned with this repo's storage and versioning rules.
+
+### ADR
+
+- Use when a technical choice is costly to reverse or will be referenced later.
+- Keep the decision narrow, the alternatives explicit, and the consequences honest.
+
+### Architecture
+
+- Use when the user needs a system-level blueprint rather than implementation steps.
+- Capture boundaries, dependencies, data flow, and notable constraints.
+
+### API Docs
+
+- Use when the user needs stable API reference material.
+- Prefer source-of-truth definitions, examples, error states, and auth guidance.
+
+### Runbook
+
+- Use for incidents, maintenance, support procedures, and repeatable operations.
+- Include triggers, diagnosis, actions, rollback, and escalation.
+
+### Postmortem
+
+- Use after incidents or failures that need structured learning.
+- Focus on timeline, impact, root cause, and action items.
+
+### README / Changelog
+
+- Use README for orientation, setup, usage, and repo navigation.
+- Use changelog when user-visible releases or notable changes need to be summarized.
+
+### Onboarding / SOP
+
+- Use for new-joiner setup, project handoff, or repeatable operating procedure.
+- Keep the steps deterministic and easy to follow under pressure.
+
 ## Storage Convention
 
 Use `docs/vandor/` as the document root.
@@ -75,6 +125,7 @@ Use `docs/vandor/` as the document root.
 - Store the living BRD at `docs/vandor/BRD.md`
 - Store versioned PRD snapshots at `docs/vandor/prd/<date-time>.md`
 - Store versioned BRD snapshots at `docs/vandor/brd/<date-time>.md`
+- Store other document families at `docs/vandor/<family>/<date-time>.md`
 
 ### Multi-project non-coding repository
 
@@ -82,6 +133,7 @@ Use `docs/vandor/` as the document root.
 - Use `docs/vandor/<project-slug>/PRD.md` and `docs/vandor/<project-slug>/BRD.md` for the living docs
 - Store PRD snapshots at `docs/vandor/<project-slug>/prd/<date-time>.md`
 - Store BRD snapshots at `docs/vandor/<project-slug>/brd/<date-time>.md`
+- Store other document families at `docs/vandor/<project-slug>/<family>/<date-time>.md`
 
 ### Versioning Rules
 

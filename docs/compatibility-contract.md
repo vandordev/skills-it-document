@@ -5,6 +5,7 @@
 - Draft a PRD
 - Draft a BRD
 - Research supporting evidence for a PRD or BRD
+- Draft ADR, architecture, API docs, runbook, postmortem, README/changelog, or onboarding/SOP documents
 - Revise a structured product or business document
 - Review a document for completeness, consistency, or missing assumptions
 - Add a new document family under `core/references/`

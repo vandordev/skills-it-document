@@ -15,6 +15,7 @@ Product notes, business context, and stakeholder decisions are often scattered a
 - Drafts PRD and BRD documents from source notes
 - Revises documents when scope, market, or business assumptions change
 - Researches supporting evidence before drafting when the request needs fresh sources
+- Covers ADR, architecture, API docs, runbooks, postmortems, README/changelog, and onboarding/SOP documents
 - Keeps facts, assumptions, and open questions separated
 - Makes it easy to add new document families later through `core/references/`
 - Uses `docs/vandor/` as the document root and supports both single-project and multi-project repo layouts
@@ -108,6 +109,7 @@ After installation, ask your agent to use `it-document` when you want to:
 
 - draft a PRD or BRD
 - research the market, competitors, or supporting evidence first
+- create an ADR, architecture blueprint, API docs, runbook, postmortem, README/changelog, or onboarding/SOP
 - revise a document after scope changes
 - review a document for gaps, contradictions, or missing assumptions
 - create a new document family with the same structured style

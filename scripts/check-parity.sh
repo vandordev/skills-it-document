@@ -20,6 +20,13 @@ for adapter in codex claude copilot gemini opencode cursor; do
   cmp -s "$ROOT/core/references/prd.md" "$ROOT/adapters/$adapter/references/prd.md" || { echo "reference mismatch: $adapter prd" >&2; exit 1; }
   cmp -s "$ROOT/core/references/brd.md" "$ROOT/adapters/$adapter/references/brd.md" || { echo "reference mismatch: $adapter brd" >&2; exit 1; }
   cmp -s "$ROOT/core/references/research.md" "$ROOT/adapters/$adapter/references/research.md" || { echo "reference mismatch: $adapter research" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/adr.md" "$ROOT/adapters/$adapter/references/adr.md" || { echo "reference mismatch: $adapter adr" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/architecture.md" "$ROOT/adapters/$adapter/references/architecture.md" || { echo "reference mismatch: $adapter architecture" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/api-docs.md" "$ROOT/adapters/$adapter/references/api-docs.md" || { echo "reference mismatch: $adapter api-docs" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/runbook.md" "$ROOT/adapters/$adapter/references/runbook.md" || { echo "reference mismatch: $adapter runbook" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/postmortem.md" "$ROOT/adapters/$adapter/references/postmortem.md" || { echo "reference mismatch: $adapter postmortem" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/readme-changelog.md" "$ROOT/adapters/$adapter/references/readme-changelog.md" || { echo "reference mismatch: $adapter readme-changelog" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/onboarding-sop.md" "$ROOT/adapters/$adapter/references/onboarding-sop.md" || { echo "reference mismatch: $adapter onboarding-sop" >&2; exit 1; }
 done
 
 grep -q '^# Compatibility Contract$' "$ROOT/docs/compatibility-contract.md" || { echo "missing compatibility contract heading" >&2; exit 1; }

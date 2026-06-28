@@ -53,4 +53,11 @@ for adapter in codex claude copilot gemini opencode cursor; do
   test -f "$ROOT/adapters/$adapter/references/prd.md"
   test -f "$ROOT/adapters/$adapter/references/brd.md"
   test -f "$ROOT/adapters/$adapter/references/research.md"
+  test -f "$ROOT/adapters/$adapter/references/adr.md"
+  test -f "$ROOT/adapters/$adapter/references/architecture.md"
+  test -f "$ROOT/adapters/$adapter/references/api-docs.md"
+  test -f "$ROOT/adapters/$adapter/references/runbook.md"
+  test -f "$ROOT/adapters/$adapter/references/postmortem.md"
+  test -f "$ROOT/adapters/$adapter/references/readme-changelog.md"
+  test -f "$ROOT/adapters/$adapter/references/onboarding-sop.md"
 done
