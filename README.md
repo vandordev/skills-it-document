@@ -12,6 +12,7 @@ Product notes, business context, and stakeholder decisions are often scattered a
 - Revises documents when scope, market, or business assumptions change
 - Keeps facts, assumptions, and open questions separated
 - Makes it easy to add new document families later through `core/references/`
+- Uses `docs/vandor/` as the document root and supports both single-project and multi-project repo layouts
 
 ## Who This Is For
 
