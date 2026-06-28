@@ -1,5 +1,9 @@
 # IT Document
 
+<p align="center">
+  <img src="./assets/hero/hero.png" alt="IT Document hero image" width="960" />
+</p>
+
 `it-document` is a reusable skill for drafting, revising, and reviewing structured product and business documents such as PRD and BRD.
 
 ## Why This Exists
