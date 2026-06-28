@@ -19,6 +19,7 @@ cmp -s "$ROOT/adapters/cursor/AGENTS.md" "$TMP_DIR/repo/adapters/cursor/AGENTS.m
 for adapter in codex claude copilot gemini opencode cursor; do
   cmp -s "$ROOT/core/references/prd.md" "$ROOT/adapters/$adapter/references/prd.md" || { echo "reference mismatch: $adapter prd" >&2; exit 1; }
   cmp -s "$ROOT/core/references/brd.md" "$ROOT/adapters/$adapter/references/brd.md" || { echo "reference mismatch: $adapter brd" >&2; exit 1; }
+  cmp -s "$ROOT/core/references/research.md" "$ROOT/adapters/$adapter/references/research.md" || { echo "reference mismatch: $adapter research" >&2; exit 1; }
 done
 
 grep -q '^# Compatibility Contract$' "$ROOT/docs/compatibility-contract.md" || { echo "missing compatibility contract heading" >&2; exit 1; }

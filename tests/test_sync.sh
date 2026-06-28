@@ -52,4 +52,5 @@ grep -q '^# IT Document for Cursor$' "$ROOT/adapters/cursor/AGENTS.md"
 for adapter in codex claude copilot gemini opencode cursor; do
   test -f "$ROOT/adapters/$adapter/references/prd.md"
   test -f "$ROOT/adapters/$adapter/references/brd.md"
+  test -f "$ROOT/adapters/$adapter/references/research.md"
 done

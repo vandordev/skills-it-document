@@ -1,7 +1,7 @@
 interface:
   display_name: "IT Document"
-  short_description: "Draft and maintain structured product and business documents."
-  default_prompt: "Use $it-document to draft, revise, or review structured product and business documents such as PRD and BRD."
+  short_description: "Draft, research, and maintain structured product and business documents."
+  default_prompt: "Use $it-document to draft, revise, research, or review structured product and business documents such as PRD and BRD."
 
 policy:
   allow_implicit_invocation: true

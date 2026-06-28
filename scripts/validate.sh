@@ -8,6 +8,7 @@ required_files=(
   "$ROOT/core/metadata.yaml"
   "$ROOT/core/references/prd.md"
   "$ROOT/core/references/brd.md"
+  "$ROOT/core/references/research.md"
   "$ROOT/adapters/codex/SKILL.md"
   "$ROOT/adapters/codex/agents/openai.yaml"
   "$ROOT/adapters/claude/CLAUDE.md"
