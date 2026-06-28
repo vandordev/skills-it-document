@@ -34,6 +34,55 @@ Do not use this for code, API flow testing, or free-form note taking unless the 
 7. Keep the document concise, concrete, and easy to scan.
 8. If the requested document family does not exist yet, outline it first and ask before inventing a shape.
 
+## Intake Flow
+
+Before drafting, collect the minimum context:
+
+- what document family is needed
+- which repo or project it belongs to
+- who the audience is
+- what decision or action the document should support
+- whether the user wants a living doc, a snapshot, or both
+
+If the context is incomplete, ask the smallest number of questions needed to proceed.
+
+## Decision Tree
+
+Choose the document family by intent:
+
+- PRD and BRD for product/business direction
+- ADR for a narrow technical decision
+- Architecture for system-level structure
+- API Docs for interface reference
+- Runbook for operational procedure
+- Postmortem for incident learning
+- README/Changelog for repo orientation and release notes
+- Onboarding/SOP for setup and repeatable process
+
+If the user asks for a document that overlaps multiple families, start with the primary one and note the secondary family in the outline.
+
+## Research-to-Draft Flow
+
+- If the request needs current facts, external references, or market/technical validation, research first.
+- If the request is based only on stable internal context, proceed with the local context and ask targeted questions only when needed.
+- If research findings materially change the shape of the document, update the outline before drafting.
+
+## Outline Gate
+
+- Create an outline first when the document shape is unclear, the request combines multiple families, or the scope is large.
+- Skip the outline only when the user explicitly wants a small edit or a straightforward revision to an existing document.
+- Treat the outline as a checkpoint: do not draft the full document until the outline is aligned with the request.
+
+## Drafting Workflow
+
+1. Confirm the family and output location.
+2. Check whether research is needed.
+3. If research is needed, gather evidence first and capture URLs.
+4. Draft an outline before the full document when the shape is unclear.
+5. Write the document using the matching reference structure.
+6. Add assumptions and open questions explicitly.
+7. Save the living doc and, if needed, the versioned snapshot.
+
 ## Document Selection
 
 - PRD: product intent, users, problem, scope, requirements, acceptance criteria, launch success.
@@ -115,6 +164,22 @@ When research is needed, produce:
 - Use for new-joiner setup, project handoff, or repeatable operating procedure.
 - Keep the steps deterministic and easy to follow under pressure.
 
+## Document Family Templates
+
+Use the matching reference file as the baseline skeleton before writing the document:
+
+- `PRD` -> `core/references/prd.md`
+- `BRD` -> `core/references/brd.md`
+- `ADR` -> `core/references/adr.md`
+- `Architecture` -> `core/references/architecture.md`
+- `API Docs` -> `core/references/api-docs.md`
+- `Runbook` -> `core/references/runbook.md`
+- `Postmortem` -> `core/references/postmortem.md`
+- `README/Changelog` -> `core/references/readme-changelog.md`
+- `Onboarding/SOP` -> `core/references/onboarding-sop.md`
+
+If a family needs a stricter house style, extend the matching reference file rather than expanding the core workflow.
+
 ## Storage Convention
 
 Use `docs/vandor/` as the document root.
@@ -141,6 +206,24 @@ Use `docs/vandor/` as the document root.
 - Create a new timestamped snapshot whenever the document is materially updated
 - Keep the living doc and the latest snapshot aligned
 - If the repo shape is ambiguous, ask whether it is a single coding project or a multi-project portfolio before choosing a path
+
+## Quality Gate
+
+Before considering a document done, verify:
+
+- the document family matches the request
+- the storage path follows the repo convention
+- facts, assumptions, and open questions are separated
+- research-backed claims have source URLs when applicable
+- the structure matches the reference for that family
+- the output is readable without the original chat thread
+
+## Versioning Workflow
+
+- If the user is working in a coding repository, update the living docs under `docs/vandor/` first.
+- If the user explicitly wants a dated snapshot or the document changes materially, save a timestamped copy under the matching family folder.
+- If the repository uses the multi-project layout, keep each project isolated under its own folder and version snapshots inside that project folder.
+- If only a minor wording change is requested, update the living doc and decide whether a snapshot is necessary based on materiality.
 
 ## Output Expectations
 
